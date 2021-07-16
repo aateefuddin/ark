@@ -1,0 +1,124 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white hh-navigation-wraper">
+  <div class="container-fluid px-4 hh-navbar-resp">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand py-md-0 text-center me-0" routerLink="/Home">
+          <img src="/assets/img/logo.PNG" alt="HomeHosp" class="hh-logo-img">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" aria-current="page" routerLink="/Home">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="javascript:void(0)">My Appointments</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="javascript:void(0)">Delegated Access</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="javascript:void(0)">Ads</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="javascript:void(0)">Book Appointment</a>
+          </li>
+          </ul>
+      </div>
+      <div class="hh-notification-wraper me-3 ms-2">
+          <mat-icon matBadge="3" matBadgeOverlap="true" matBadgeSize="small" matBadgeColor="warn">notifications</mat-icon>
+      </div>
+      <div class="hh-profile-wraper">
+          <a href="javascript:void(0)" [matMenuTriggerFor]="menu">
+              <img src="/assets/img/profile.jpg" alt="Profile" class="hh-profile-img">
+          </a>
+      </div>
+      <mat-menu #menu="matMenu" xPosition="before" class="bg-white">
+          <div class="w-100 px-4 py-2 bg-light">
+              <div class="fw-bold">Leo Langlois</div>
+              <div class="small text-muted">leolanglois@gmail.com</div>
+          </div>
+          <button mat-menu-item>
+              <mat-icon>person</mat-icon>
+              <span>Profile</span>
+          </button>
+          <button mat-menu-item>
+              <mat-icon>logout</mat-icon>
+              <span>Logout</span>
+          </button>
+      </mat-menu>
+  </div>
+</nav>
+<div class="container-fluid p-4  hh-content">
+  <div class="row">
+      <div class="col-md-12">
+          <div class="card Overlay">
+            <img class="backImage" src="/../assets/img/bg-img.jpg">
+            </div>
+      </div>
+
+  </div>
+</div>
+  <div class="row">
+      <div class="col-md-12">
+          <div class="card">
+            <mat-tab-group dynamicHeight>
+
+              <mat-tab class="pl-20" label="personal Information">
+                <div class=" mat-elevation-z4">
+                  <div class="example-container">
+
+                      <mat-form-field appearance="standard">
+                        <mat-label>frist Name</mat-label>
+                        <input matInput placeholder="Placeholder">
+
+                        <mat-label>Last Name1</mat-label>
+                        <input matInput placeholder="Placeholder">
+
+                        <mat-label>Last Name2</mat-label>
+                        <input matInput placeholder="Placeholder">
+
+
+                      </mat-form-field>
+
+                      <mat-form-field appearance="standard">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput placeholder="Placeholder">
+
+                      </mat-form-field>
+
+
+                      <mat-form-field appearance="standard">
+                        <mat-label>Phone Number</mat-label>
+                        <input matInput placeholder="Phone Number">
+
+                      </mat-form-field>
+
+
+                      <div class="example-container">
+                        <mat-form-field appearance="standard">
+                          <mat-label>Enter your email</mat-label>
+                          <input matInput placeholder="pat@example.com" [formControl]="email" required>
+                          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+                      </div>
+
+                  </div>
+                </div>
+              </mat-tab>
+              <mat-tab label="Organisation Information">
+                <div class="example-large-box mat-elevation-z4">
+                  Large content
+                </div>
+              </mat-tab>
+              <mat-tab label="Change Password">
+                <div class="example-large-box mat-elevation-z4">
+                  Large content
+                </div>
+              </mat-tab>
+            </mat-tab-group>
+              </div>
+          </div>
+      </div>
+
+
